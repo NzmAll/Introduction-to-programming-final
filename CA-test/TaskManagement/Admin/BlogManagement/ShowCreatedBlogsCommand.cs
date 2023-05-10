@@ -18,8 +18,9 @@ namespace TaskManagement.Admin.BlogManagement
 
             List<Blog> createdBlogs = blogRepository.GetAll(b => b.Status == BlogStatus.Created);
 
-            foreach (Blog blog in createdBlogs)
+            for (int i = 0; i < createdBlogs.Count; i++)
             {
+                Blog blog = createdBlogs[i];
                 Console.WriteLine($"{blog.Id} {blog.Title} {blog.Owner.GetFullName()} {blog.CreatedAt}");
             }
         }

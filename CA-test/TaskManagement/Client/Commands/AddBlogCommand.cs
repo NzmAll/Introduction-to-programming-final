@@ -17,8 +17,8 @@ namespace TaskManagement.Client.Commands
         {
             BlogRepository blogRepository = new BlogRepository();
 
-            string title = Console.ReadLine();
-            string content = Console.ReadLine();
+            string title = Console.ReadLine()!;
+            string content = Console.ReadLine()!;
 
             Blog blog = new Blog(title, content, UserService.CurrentUser, BlogStatus.Created);
             blogRepository.Insert(blog);
