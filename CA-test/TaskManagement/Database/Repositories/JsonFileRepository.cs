@@ -66,14 +66,14 @@ namespace TaskManagement.Database.Repositories
             if (File.Exists(_fileName))
             {
                 string jsonData = File.ReadAllText(_fileName);
-                _data = JsonConvert.DeserializeObject<List<T>>(jsonData);
+                //_data = JsonConvert.DeserializeObject<List<T>>(jsonData);
             }
         }
 
         private void SaveDataToFile()
         {
-            string jsonData = JsonConvert.SerializeObject(_data, System.Xml.Formatting.Indented);
-            File.WriteAllText(_fileName, jsonData);
+            //string jsonData = JsonConvert.SerializeObject(_data, System.Xml.Formatting.Indented);
+            //File.WriteAllText(_fileName, jsonData);
         }
 
         private decimal GenerateNewId()

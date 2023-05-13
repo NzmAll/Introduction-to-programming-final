@@ -15,6 +15,7 @@ namespace TaskManagement.Database.Models
         public UserRole Role { get; set; } 
         public bool IsBanned { get; set; }
         public string PhoneNumber { get; set; }
+        public object FirstName { get; internal set; }
 
         public User(string name, string lastName, string password, string email, UserRole role = UserRole.Member)
             : this(name, lastName, password, email, DateTime.Now, role) { }

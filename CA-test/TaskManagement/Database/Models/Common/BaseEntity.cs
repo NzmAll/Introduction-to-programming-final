@@ -13,4 +13,13 @@ namespace TaskManagement.Database.Models.Common
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime? UpdatedAt { get; set; }
     }
+
+    public class Comment
+    {
+        public string Text { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public object CreatedAt { get; internal set; }
+        public object Author { get; internal set; }
+    }
 }
